@@ -1,6 +1,8 @@
 
 # Login Form
 
+![The project's screenshot.](ss/ss.png)
+
 The project have been built with vanilla js & scss. Also webpack, babel, postcss have been used.
 
 To run the project:
