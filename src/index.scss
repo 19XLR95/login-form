@@ -1,0 +1,199 @@
+$mainColor: #286efa;
+$mainColorHover: #2360d8;
+$mainColorFocus: #1d4eaf;
+$mainFont: 'Roboto', sans-serif;
+$mainFontLight: 300;
+$mainFontRegular: 400;
+$mainFontBold: 700;
+$titleFontSize: 25px;
+$formElementColor: rgba(0, 0, 0, 0.1);
+$formElementBGColor: #ffffff;
+
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: $mainFont;
+}
+
+a {
+    color: $mainColor;
+    font-weight: $mainFontBold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#main-grid {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    height: 100%;
+    width: 100%;
+
+    > div:first-child {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        > div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: absolute;
+            top: 3%;
+            right: 42%;
+            font-size: 11px;
+            font-weight: $mainFontBold;
+            width: 100px;
+
+            div {
+                width: 4px;
+                height: 4px;
+                border-radius: 100%;
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+
+            h1 {
+                font-size: $titleFontSize;
+                margin: 0;
+            }
+
+            p {
+                font-size: 13px;
+                font-weight: $mainFontLight;
+                margin-top: 30px;
+                margin-bottom: 20px;
+                line-height: 20px;
+            }
+
+            label {
+                color: rgba(0, 0, 0, 0.5);
+                font-size: 16px;
+                padding-left: 5px;
+                padding-right: 5px;
+                align-self: start;
+                position: relative;
+                top: 29px;
+                left: 10px;
+                transition: all 0.2s ease;
+                z-index: 10;
+            }
+
+            label:hover {
+                cursor: text;
+                user-select: none;
+            }
+
+            section {
+                display: flex;
+                align-items: center;
+                position: relative;
+                
+                input, select {
+                    width: 100%;
+                    height: 40px;
+                    border: 1px solid $formElementColor;
+                    border-radius: 4px;
+                    background-color: $formElementBGColor;
+                    padding-left: 10px;
+                    padding-right: 35px;
+                    font-family: $mainFont;
+                    font-weight: $mainFontRegular;
+                    font-size: 16px;
+                }
+
+                select {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                }
+
+                select::-ms-expand {
+                    display: none;
+                }
+
+                i {
+                    position: absolute;
+                    right: 10px;
+                    color: rgba(0, 0, 0, 0.5);
+                }
+            }
+
+            div {
+                font-size: 11px;
+                font-weight: $mainFontLight;
+                color: rgba(0, 0, 0, 0.6);
+                margin-top: 8px;
+            }
+
+            button {
+                border: none;
+                border-radius: 4px;
+                height: 40px;
+                margin-top: 25px;
+                font-family: $mainFont;
+                font-weight: $mainFontBold;
+            }
+
+            button + p {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    > div:last-child {
+        background-color: $mainColor;
+        padding-left: 20%;
+        padding-right: 20%;
+        color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+            font-size: $titleFontSize;
+        }
+
+        p {
+            line-height: 25px;
+            text-align: justify;
+        }
+    }
+}
+
+.disabled-button {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.active-button {
+    background-color: $mainColor;
+    color: #ffffff;
+}
+
+.active-button:hover {
+    background-color: $mainColorHover;
+    cursor: pointer;
+}
+
+.active-button:focus {
+    background-color: $mainColorFocus;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*:focus {
+    outline-color: $mainColor;
+}

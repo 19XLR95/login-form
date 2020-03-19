@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+        <title>Login</title>
+    </head>
+
+    <body>
+        <div id="main-grid">
+            <div>
+                <div id="steps">
+                    <span>
+                        Step <span id="step-number">1</span> of <span id="total-step">3</span>
+                    </span>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+
+                <form id="sign-up-form" method="POST">
+                    <h1>Let's set up your account</h1>
+
+                    <p>Already have an account? <a href="#">Sign in</a></p>
+
+                    <label id="label-name" for="name">Your name</label>
+                    <section>
+                        <input type="text" id="name" name="name">
+                        <i class="fa fa-user"></i>
+                    </section>
+                    
+                    <label id="label-email" for="email">Email address</label>
+                    <section>
+                        <input type="email" id="email" name="email">
+                        <i class="fa fa-envelope"></i>
+                    </section>
+                    
+                    <label id="label-user-type" for="user-type">I would describe my user type as</label>
+                    <section>
+                        <select id="user-type" name="user-type">
+                            <option value="none" selected></option>
+                            <option value="student">Student</option>
+                            <option value="hobbyist">Hobbyist</option>
+                            <option value="developer">Developer</option>
+                            <option value="manager">Manager</option>
+                        </select>
+                        <i class="fa fa-chevron-down"></i>
+                    </section>
+                    
+                    <label id="label-password" for="password">Password</label>
+                    <section>
+                        <input type="password" id="password" name="password">
+                        <i id="toggle-password-display" class="fa fa-eye"></i>
+                    </section>
+
+                    <div>Minimum 8 characters</div>
+
+                    <button id="submit-button" class="disabled-button" disabled>Next</button>
+
+                    <p>
+                        By clicking the "Next" button, you agree to creating a free account,
+                        and to <a href="#" target="_blank">Terms of Service</a> an 
+                        <a href="#" target="_blank">Privacy Policy</a>.
+                    </p>
+                </form>
+            </div>
+
+            <div>
+                <h2>Lorem ipsum</h2>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id 
+                    condimentum enim. Maecenas vel orci imperdiet, porttitor elit sit amet, 
+                    scelerisque risus.
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
